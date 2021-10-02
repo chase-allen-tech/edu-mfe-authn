@@ -1,0 +1,954 @@
+// ----------------------------
+// #COLORS
+// ----------------------------
+$font-blue: #126f9a;
+$white    : #FFFFFF;
+
+// social platforms
+$facebook-blue        : #1877F2;
+$facebook-focus-blue  : #29487d;
+$google-blue          : #4285f4;
+$google-focus-blue    : #287ae6;
+$microsoft-black      : #2f2f2f;
+$microsoft-focus-black: #000;
+$apple-black          : #000000;
+$apple-focus-black    : $apple-black;
+$accent-a-light       : #c9f2f5;
+
+html {
+  margin-right: 0 !important;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.main-content {
+  @extend .pt-4;
+  width: 266px;
+  // min-width: 464px !important;
+}
+
+.welcome-page-content {
+  width: 266px;
+  // min-width: 464px !important;
+}
+
+.login-button-width, .stateful-button-width {
+  width: 100%;
+  background-color: #F76060;
+  border-radius: 0.25rem;
+  font-size: 12px;
+  transition: all 0.2 ease-in-out;
+  border: 0;
+}
+
+.login-button-width:hover, .stateful-button-width:hover {
+  opacity: 0.8;
+  background-color: #F76060;
+}
+
+.tpa-skeleton {
+  margin-bottom: 0.75rem;
+}
+
+.sr-only {
+  position: absolute;
+  left    : -10000px;
+  top     : auto;
+  width   : 1px;
+  height  : 1px;
+  overflow: hidden;
+}
+
+.close {
+  padding-bottom: 0px !important;
+  padding-top   : 3px !important;
+}
+
+.focus-out {
+  position    : absolute;
+  padding-left: 17px;
+  opacity     : 0.75;
+  z-index     : 1;
+}
+
+.alert-link {
+  font-weight    : normal;
+  text-decoration: underline;
+  color          : #0075b4 !important;
+
+  &:hover {
+    color: #065683 !important;
+  }
+}
+
+.authn-header {
+  border-bottom: 1px solid #e7e7e7;
+  height       : 3.75rem;
+  position     : relative;
+  z-index      : 1000;
+}
+
+.authn-header img {
+  height     : 1.75rem;
+  margin-left: 2rem;
+  padding    : 1rem 0;
+  display    : block;
+  position   : relative;
+  box-sizing : content-box;
+}
+
+.form-control {
+  background-color: white !important;
+  font-size       : 0.875rem;
+  line-height     : 1.5;
+  height          : 2.75rem;
+
+}
+
+.btn-social {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+
+  margin-bottom: 1rem;
+  font-size    : 14px;
+
+  background-color: $white;
+  border          : 1px solid $font-blue;
+  width           : 224px;
+  height          : 36px;
+  color           : $font-blue;
+
+  .icon-image {
+    background-color: transparent;
+    max-height      : 24px;
+    max-width       : 24px;
+  }
+}
+
+.btn-tpa {
+  display        : flex;
+  flex-direction : row;
+  justify-content: flex-start;
+  align-items    : center;
+  padding-left   : 1rem;
+  width          : 14rem;
+
+  .icon-image {
+    background-color: transparent;
+    max-height      : 24px;
+    max-width       : 24px;
+  }
+}
+
+.font-container {
+  background-color: $font-blue;
+  color           : $white;
+  font-size       : 11px;
+
+  margin-left: -6px;
+  padding-top: 10px;
+  min-width  : 30px;
+  height     : 35px;
+}
+
+.btn-oa2-facebook {
+  color           : $white;
+  border-color    : $facebook-blue;
+  background-color: $facebook-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $facebook-focus-blue;
+    border          : 1px solid $facebook-focus-blue;
+    color           : $white;
+  }
+}
+
+.btn-oa2-google-oauth2 {
+  color           : $white;
+  border-color    : $google-blue;
+  background-color: $google-blue;
+
+  .icon-image {
+    margin-left: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $google-focus-blue;
+    border          : 1px solid $google-focus-blue;
+    color           : $white;
+  }
+}
+
+.btn-oa2-apple-id {
+  color           : $white;
+  border-color    : $apple-black;
+  background-color: $apple-black;
+  font-size       : 16px;
+
+  .icon-image {
+    max-height: 1.8em;
+    max-width : 2.0em;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $apple-focus-black;
+    border          : 1px solid $apple-focus-black;
+    color           : $white;
+  }
+}
+
+.btn-oa2-azuread-oauth2 {
+  color           : $white;
+  border-color    : $microsoft-black;
+  background-color: $microsoft-black;
+
+  &:hover,
+  &:focus {
+    background-color: $microsoft-focus-black;
+    border          : 1px solid $microsoft-focus-black;
+    color           : $white;
+  }
+}
+
+.submit {
+  display      : inherit;
+  margin       : 0 auto;
+  margin-bottom: 2rem;
+}
+
+.institute-icon {
+  @extend .mr-1;
+  @extend .text-gray;
+
+  display      : inline-block;
+  margin-bottom: 0.25rem;
+  height       : 18px;
+  width        : 18px;
+
+  svg {
+    display: inline-block;
+  }
+}
+
+.login-help {
+  padding-left: 14px;
+}
+
+.invalid-feedback {
+  color: $red;
+}
+
+.full-vertical-height {
+  height: 100vh;
+}
+
+.help-links {
+  margin-left: -5px;
+}
+
+select.form-control {
+  background: none !important;
+}
+
+#honor-code p {
+  margin : 0;
+  padding: 0;
+}
+
+#honor-code a span {
+  @extend .sr-only;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.mw-420 {
+  max-width: 420px;
+}
+
+.mw-500 {
+  max-width: 500px;
+}
+
+.mw-32em {
+  max-width: 32em;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-7 {
+  margin-top: 7rem;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.tooltip-shadow {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+#password-requirement-left {
+  opacity: 1;
+
+  .tooltip-inner {
+    @extend .tooltip-shadow;
+    background: white;
+    display   : block;
+    color     : #707070;
+  }
+
+  .arrow::before {
+    border-left-color: #fff;
+    @extend .tooltip-shadow;
+  }
+
+}
+
+#password-requirement-top {
+  opacity      : 1;
+  width        : 90%;
+  margin-bottom: 10px;
+
+  .tooltip-inner {
+    max-width : inherit;
+    background: white;
+    display   : block;
+    @extend .tooltip-shadow;
+    color: #707070;
+  }
+
+  .arrow::before {
+    border-top-color: #fff;
+    @extend .tooltip-shadow;
+  }
+
+}
+
+#forgotpassword-success-alert {
+  .alert-link {
+    color: #454545 !important;
+  }
+}
+
+.screen-header-light {
+  background-color: $light-200;
+}
+
+.screen-header-primary {
+  background-color: $primary-400;
+}
+
+.large-screen-container {
+  background-color: $white;
+  width           : 50vw;
+}
+
+.large-screen-svg-light,
+.large-screen-svg-primary {
+  fill    : $light-200;
+  overflow: hidden;
+  position: absolute;
+}
+
+.large-screen-svg-primary {
+  fill: $primary-400;
+}
+
+.medium-screen-container {
+  flex-wrap: nowrap;
+  max-width: inherit;
+  height   : 282px;
+}
+
+.variation1-medium-screen {
+  height: 300px !important;
+}
+
+.medium-screen-svg-light,
+.medium-screen-svg-primary {
+  fill    : $light-200;
+  overflow: inherit;
+  position: absolute;
+}
+
+.medium-screen-svg-primary {
+  fill: $primary-400;
+}
+
+.screen-polygon {
+  background-color: $white;
+}
+
+.small-screen-header-light,
+.small-screen-header-primary {
+  background-color: $light-200;
+  width           : 100vw;
+}
+
+.small-screen-header-primary {
+  background-color: $primary-400;
+}
+
+.extra-large-screen-top-stripe {
+  height: 0.5rem;
+  background-image: linear-gradient(102.02deg,
+      $brand-700 10%,
+      $brand 10%,
+      $brand 45%,
+      $primary-700 45%,
+      $primary-700 55%,
+      $accent-a 55%,
+      $accent-a 75%,
+      $accent-a-light 75%,
+    );
+  background-repeat: no-repeat;
+}
+
+.medium-screen-top-stripe {
+  height: 0.5rem;
+  background-image: linear-gradient(102.02deg,
+      $brand-700,
+      $brand-700 10%,
+      $brand 10%,
+      $brand 90%,
+      $primary-700 90%,
+      $primary-700 100%,
+    );
+  background-repeat: no-repeat;
+}
+
+.large-screen-top-stripe {
+  height: 0.5rem;
+  background-image: linear-gradient(102.02deg,
+      $brand-700 10%,
+      $brand 10%,
+      $brand 65%,
+      $primary-700 65%,
+      $primary-700 75%,
+      $accent-a 75%,
+      $accent-a 75%);
+  background-repeat: no-repeat;
+}
+
+.small-screen-top-stripe {
+  height: 0.25rem;
+  background-image: linear-gradient(102.02deg,
+      $brand-700,
+      $brand-700 20%,
+      $brand 20%,
+    );
+  background-repeat: no-repeat;
+}
+
+// Progressive profiling base component classes
+.medium-container {
+  flex-wrap: nowrap;
+  max-width: inherit;
+  height   : 260px;
+}
+
+.extra-extra-large-svg-line {
+  stroke      : $accent-b;
+  stroke-width: 0.5rem;
+
+  width : 5.5rem;
+  height: 150px;
+}
+
+.extra-large-svg-line {
+  stroke      : $accent-b;
+  stroke-width: 0.5rem;
+
+  width : 5.5rem;
+  height: 110px;
+}
+
+.medium-svg-line {
+  stroke      : $accent-b;
+  stroke-width: 0.5rem;
+  width       : 7em;
+  height      : 110px;
+}
+
+.small-svg-line {
+  stroke      : $accent-b;
+  stroke-width: 0.25rem;
+
+  width : 4em;
+  height: 90px;
+}
+
+.extra-small-svg-line {
+  stroke      : $accent-b;
+  stroke-width: 0.25rem;
+
+  width : 4em;
+  height: 80px;
+}
+
+// Non-Auth Screen Svg Lines
+.large-screen-svg-line {
+  padding-top : 0.5rem;
+  stroke      : $accent-b;
+  stroke-width: 0.5rem;
+  width       : 5.5rem;
+  height      : 240px;
+}
+
+.variation1-bar-color {
+  stroke: $brand !important;
+}
+
+.variation2-bar-color {
+  stroke: $accent-a !important;
+}
+
+.medium-screen-svg-line {
+  padding-top : 0.5rem;
+  stroke      : $accent-b;
+  stroke-width: 0.5rem;
+  width       : 7em;
+  height      : 115px;
+}
+
+.small-screen-svg-line {
+  padding-top : 0.5rem;
+  stroke      : $accent-b;
+  stroke-width: 0.25rem;
+  width       : 4em;
+  height      : 72px;
+}
+
+.dicount-heading {
+  margin-left: 7px;
+}
+
+.hover-text:hover {
+  color: $black !important;
+
+  .hover-icon {
+    color: $black !important;
+  }
+}
+
+.hover-discount-icon:hover {
+  color: $white !important;
+}
+
+.large-heading {
+  margin-left: 7px;
+  color      : $white;
+  max-width  : 24.5rem;
+  line-height: 78px;
+  font-size  : 78px;
+}
+
+.medium-heading {
+  padding-left: 1rem;
+  color       : $white;
+  max-width   : 27rem;
+  line-height : 60px;
+  font-size   : 60px;
+}
+
+.small-heading {
+  padding-left: 0.5rem;
+  color       : $white;
+  line-height : 40px;
+  font-size   : 36px;
+}
+
+.logo {
+  width      : 4.44rem;
+  margin-top : 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.username-suggestion {
+  padding      : 1px 0.5rem;
+  margin       : 0.25rem;
+  border-radius: 0.375rem;
+  line-height  : 24px;
+  font-size    : 12px;
+  font-weight  : normal;
+  color        : $primary-700;
+}
+
+.username-suggestion-label {
+  font-size   : 0.75rem;
+  line-height : 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.yellow-border {
+  border: 2px solid #F0CC00;
+}
+
+.one-rem-font {
+  font-size: 0.99rem;
+  color    : #707070;
+}
+
+.institute-heading {
+  color: $primary-700;
+}
+
+.logistration-button {
+  color: $gray-700;
+}
+
+.logistration-button:hover {
+  color          : $gray-700;
+  text-decoration: none;
+}
+
+.dropdown-item:active {
+  background-color: #F2F0EF;
+}
+
+.dropdown-container {
+  box-shadow      : 0px 2px 4px rgba(0, 0, 0, 0.15), 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius   : 4px;
+  max-height      : 200px;
+  font-size       : 1rem;
+  font-weight     : normal;
+  line-height     : 1.25rem;
+  overflow-y      : scroll;
+  position        : absolute;
+  background-color: #fff;
+  width           : 464px;
+}
+
+.email-error-alert {
+  padding: 0.5rem 1rem;
+
+  .alert-close {
+    float: right;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .alert-text {
+    font-size  : 0.75rem;
+    line-height: 1.25rem;
+  }
+
+  .alert-link {
+    color: $primary !important;
+
+    &:hover {
+      text-decoration: underline;
+      color          : $info-700 !important;
+    }
+  }
+}
+
+.email-warning-alert-link {
+  color: $info-500 !important;
+
+  &:hover {
+    text-decoration: underline;
+    color          : $info-700 !important;
+  }
+}
+
+#forgot-password {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrow-back-icon {
+  margin-top: 2px;
+}
+
+.icon-size {
+  width: 2.3rem;
+}
+
+.has-floating-label {
+  color: $gray-500;
+}
+
+.pgn__form-control-floating-label .pgn__form-control-floating-label-content {
+  font-size  : 0.875rem;
+  line-height: 1.5;
+}
+
+.pgn__form-text {
+  font-size: 0.75rem;
+}
+
+.form-field .form-control:focus~.pgn__form-control-floating-label .pgn__form-control-floating-label-content {
+  font-size: 16px;
+  color    : $primary-700;
+}
+
+.form-field .form-control:not([value='']):not(:focus)~.pgn__form-control-floating-label .pgn__form-control-floating-label-content {
+  font-size: 16px;
+}
+
+.pgn__form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-text-size {
+  margin-top : 0.188rem !important;
+  line-height: 1.25rem;
+}
+
+.progressive-profiling-support {
+  font-size  : 0.875rem;
+  font-weight: 400;
+}
+
+.discount-banner {
+  background-color: #03C7E8;
+}
+
+.dashed-border {
+  border-style: dashed;
+  border-width: thin;
+  padding     : 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mw-500 {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+@media (min-width: 463px) {
+  .reset-password-container {
+    width    : 420px;
+    max-width: 420px;
+  }
+
+  .tpa-skeleton {
+    min-width: 464px !important;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .welcome-page-content {
+    padding-top: 1.5rem !important;
+  }
+
+  .layout {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: center;
+  }
+
+  .dashed-border {
+    border-style: dashed;
+    border-width: thin;
+    padding     : 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .layout {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .layout {
+    display        : flex;
+    justify-content: space-between;
+
+  }
+
+  .content {
+    display        : flex;
+    justify-content: center;
+    margin-top     : 4rem;
+  }
+}
+
+@media (max-width: 464px) {
+  .dropdown-container {
+    width   : auto;
+    left    : 0;
+    right   : 0;
+    position: relative;
+  }
+}
+
+@media (max-height: 500px) {
+
+  .large-screen-svg-line,
+  .large-heading {
+    margin-top: 5rem;
+  }
+}
+
+.alert {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-right: calc(100% - 100vw);
+    margin-left : 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .variation2-text-alignment {
+    text-align: left;
+  }
+}
+
+// Smaller than Extra Small (Mobile Screens)
+@media (max-width: 464px) {
+  .btn-social {
+    min-width    : 100%;
+    margin-bottom: 0.75rem;
+    margin-right : 0 !important;
+  }
+
+  .welcome-page-content,
+  .main-content {
+    width: 100vw;
+    min-width: 100vw !important;
+    padding  : 1.5rem !important;
+  }
+
+  .progressive-profiling-support {
+    font-size  : 0.688rem;
+    font-weight: normal;
+    line-height: 0.938rem;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: $light-200;
+}
+
+.secondary-provider-link {
+  font-weight: normal;
+  font-size  : 0.875rem;
+  line-height: 1.5rem;
+  color      : $primary-700
+}
+
+////////////////// Custom ////////////////////////
+.p-login {
+  padding: 50px 50px 20px 50px;
+}
+
+.w-google {
+  width: 100px;
+}
+
+.mtp-30 {
+  margin-top: 30px;
+}
+
+.px-30 {
+  padding-left : 30px;
+  padding-right: 30px;
+}
+
+.logo-content {
+
+  & input:-webkit-autofill,
+  & input:-webkit-autofill:hover,
+  & input:-webkit-autofill:focus,
+  & input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+}
+
+.input-border-bottom {
+  border-bottom: 2px solid #f76060;
+}
+
+.nav-item.nav-link {
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-item.nav-link.active {
+  border-color: transparent transparent #ccc;
+}
+
+.form-control {
+  border-bottom: 2px solid #F76060;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  height: 2.5rem;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+  border-color: #F76060;
+  box-shadow: none;
+}
+
+.pgn__form-control-floating-label {
+  padding-left: 0;
+}
+
+.pgn__form-group {
+  margin-bottom: 25px;
+}
+
+.btn-icon, .pgn__form-control-decorator .btn-icon {
+  color: #F76060 !important;
+}
+
+.btn-icon:hover, .pgn__form-control-decorator .btn-icon:hover {
+  background-color: #F76060 !important;
+}
+
+#forgot-password {
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.fsp-12 {
+  font-size: 12px;
+}
+
+.fsp-14 {
+  font-size: 14px;
+}
